@@ -1,0 +1,31 @@
+.hidden{
+	display: none
+}
+.hidden .content{
+	padding: 50px 0;
+}
+
+.mfp-content{
+	.avia-section{
+		max-width: 1200px;
+		margin: 0 auto;
+		float: none;
+		display: block;
+		visibility: visible;
+		opacity: 1;     
+	}
+}
+
+div.avia-popup .mfp-close {
+	top: 0;
+	right: 0;
+	border: 0 !important;
+	transform: none !important;
+	opacity: 1;
+	color: #333333;
+}
+
+.mfp-container .mfp-content {
+	display: inline-flex;
+	align-items: center;
+}

@@ -1,0 +1,40 @@
+:root {
+   --scrollBarWidth: 0px;
+
+   --colorWhite: #fff;
+   --colorBlack: #000;
+
+   --primaryBgColor: #fff;
+   --altBgColor: #f5f5f5;
+   --primaryColor: #000;
+   --altColor: #fff;
+   --textColor: #000;
+   --altTextColor: #fff;
+   --headingColor: #000;
+   --altHeadingColor: #fff;
+
+   --headingFontFamily: "Poppins", sans-serif;
+   --bodyFontFamily: "Open Sans", sans-serif;
+
+   --regular: 400;
+   --semibold: 600;
+   --medium: 500;
+   --bold: 700;
+}
+
+/*
+Hides all Flickity slides except for the first, until the Flickity is fully loaded (.flickity-enabled).
+Additionally, this will not apply to Sliders that have the "watchCSS" parameter enabled (.ep-flickity-watch-css)
+*/
+.ep-flickity-slider:not(.flickity-enabled):not(.ep-flickity-watch-css)
+   .ep-flickity-slide:not(:first-child) {
+   display: none;
+}
+sup {
+   font-size: 0.8em;
+   vertical-align: super;
+}
+sub {
+   font-size: 0.8em;
+   vertical-align: sub;
+}

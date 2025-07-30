@@ -1,0 +1,15 @@
+_deploy
+assets/css/**
+assets/js/**
+!assets/js/dist/
+!assets/js/dist/**
+!assets/css/dist/
+!assets/css/dist/**
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+node_modules
+Thumbs.db
