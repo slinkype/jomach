@@ -6,25 +6,13 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 <div class="header <?php echo $header_class; ?>">
 	<div class="top-menu">
 		<div class="top-menu-inner">
-			<div class="header-search-container">
-				<button class="header-search-toggle"></button>
-				<div class="header-search-form">
-					<?php get_search_form(); ?>
-				</div>
-			</div>
-			<?php
-				$args = array(
-					'items_wrap'        => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
-					'theme_location'	=> 'avia2',
-					'menu_id' 			=> '',
-					'menu_class'		=> 'secondary-menu',
-					'container_class'	=> 'secondary-menu-container',
-					'fallback_cb' 		=> 'avia_fallback_menu',
-					'walker' 			=> new avia_responsive_mega_menu()
-				);
-				wp_nav_menu( $args );
-			?>
+            <div class="location">Av. Domingo Cueto Mz A5 Lt5 (Asociación AES), Punta Hermosa, Lima</div>
+			
 		</div>
+      <div class="header-contact-info">
+         <div class="phone">Tel: (01) 123-4567</div>
+         <div class="email">Email: info@example.com</div>
+      </div>
 	</div>
 	<div class="header-inner">
 		<div class="header-logo">
@@ -43,6 +31,12 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 				);
 				wp_nav_menu( $args );
 			?>
+         	<div class="header-search-container">
+				<button class="header-search-toggle"></button>
+				<div class="header-search-form">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
 		</div>
 		<button class="hamburger-toggle" aria-label="Mobile Menu Toggle">
 			<div class="burger-box"></div>

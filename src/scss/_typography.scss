@@ -1,150 +1,182 @@
-body{
-	font-weight: var(--regular);
-	font-family: var(--bodyFontFamily);
-	font-size: var(--bodySize, 16px);
-	line-height: 1.6;
+body {
+   font-weight: var(--regular);
+   font-family: var(--bodyFontFamily);
+   font-size: var(--bodySize, 16px);
+   line-height: 1.6;
+   color: var(--colorGreenDark);
 }
 
-#top{
-	h1, h2, h3, h4, h5, h6,
-	.av-special-heading-tag{
-		font-family: var(--headingFontFamily);
-		color: var(--specialHeadingColor, var(--textColor));
-		font-weight: var(--headingWeight, var(--bold));
-		text-transform: var(--headingTransform, none);
-		line-height: var(--headingLineHeight);
-		letter-spacing: var(--headingLetterSpacing, 0px);
-		@media only screen and (max-width: 767px){
-			font-size: var(--headingSizeMobile, var(--headingSize));
-		}
-		@media only screen and (min-width: 768px) and (max-width: 989px){
-			font-size: var(--headingSizeTablet, var(--headingSize));
-		}
-		@media only screen and (min-width: 990px){
-			font-size: var(--headingSize);
-		}
-	}
+#top {
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   .av-special-heading-tag {
+      font-family: var(--headingFontFamily);
+      color: var(--specialHeadingColor, var(--textColor));
+      font-weight: var(--headingWeight, var(--semibold));
+      text-transform: var(--headingTransform, none);
+      line-height: var(--headingLineHeight);
+      letter-spacing: var(--headingLetterSpacing, 0px);
+      @media only screen and (max-width: 767px) {
+         font-size: var(--headingSizeMobile, var(--headingSize));
+      }
+      @media only screen and (min-width: 768px) and (max-width: 989px) {
+         font-size: var(--headingSizeTablet, var(--headingSize));
+      }
+      @media only screen and (min-width: 990px) {
+         font-size: var(--headingSize);
+      }
+   }
 
-	h1, .h1 .av-special-heading-tag{
-		--headingSize: 50px;
-		--headingLineHeight: 1.3;
-	}
+   h1,
+   .h1 .av-special-heading-tag {
+      --headingSize: 54px;
+      --headingLineHeight: 1.3;
+   }
 
-	h2, .h2 .av-special-heading-tag{
-		--headingSize: 36px;
-		--headingLineHeight: 1.31;
-	}
+   h2,
+   .h2 .av-special-heading-tag {
+      --headingSize: 48px;
+      --headingLineHeight: 1.31;
+   }
 
-	h3, .h3 .av-special-heading-tag{
-		--headingSize: 24px;
-		--headingLineHeight: 1.41;
-	}
+   h3,
+   .h3 .av-special-heading-tag {
+      --headingSize: 32px;
+      --headingLineHeight: 1;
+   }
 
-	h4, .h4 .av-special-heading-tag{
-		--headingSize: 20px;
-		--headingLineHeight: 1.5;
-	}
+   h4,
+   .h4 .av-special-heading-tag {
+      --headingSize: 24px;
+      --headingLineHeight: 1.5;
+   }
 
-	h5, .h5 .av-special-heading-tag{
-		--headingSize: 18px;
-		--headingLineHeight: 1.5;
-	}
+   h5,
+   .h5 .av-special-heading-tag {
+      --headingSize: 20px;
+      --headingLineHeight: 1.5;
+   }
 
-	h6, .h6 .av-special-heading-tag{
-		--headingSize: 16px;
-		--headingLineHeight: 1.37;
-	}
-		
-	.av-subheading{
-		font-family: var(--headingFontFamily);
-		font-size: var(--subHeading, 24px);
-		color: var(--subHeadingColor, var(--textColor));
-		line-height: 1.58;
-		font-weight: var(--bold);
-		display: block;
-	}
-		
-	p{
-		&:not(:last-child){
-			margin: 0 0 0.85em 0;
-		}
-	}
+   h6,
+   .h6 .av-special-heading-tag {
+      --headingSize: 16px;
+      --headingLineHeight: 1.37;
+   }
+   .av-special-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: self-end;
+   }
+   .av-subheading {
+      font-family: var(--headingFontFamily);
+      font-size: var(--subHeading, 22px);
+      color: var(--subHeadingColor, var(--textColor));
+      line-height: 1.2;
+      font-weight: var(--light);
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
 
-	.header,
-	.ep-custom-menu-element .menu,
-	.ep-custom-menu-element .sub-menu,
-	.av-share-box-list,
-	.ep-social-bookmarks{
-		--listGap: 0;
-		--listInnerGap: 0;
-		--listIcon: none;
-	}
+      &.av-subheading_below {
+         margin-left: 10px;
+      }
+   }
 
-	ul li ul{
-		--listIconColor: var(--textColor);
-	}
-	ul li ul li ul{
-		--listIconColor: var(--colorS1);
-	}
-	ol li ol{
-		--orderedListStyle: lower-alpha;
-		--orderedListIconColor: var(--colorP1);
-	}
-	ol li ol li ol{
-		--orderedListStyle: lower-roman;
-	}
-	ul{
-		margin: 0;
-		padding: 0;
-		li{
-			margin: var(--listGap, 1em 0);
-			padding: var(--listInnerGap, 0 0 0 1.4em);
-			list-style: none;
-			position: relative;
-			&:not([style="list-style-type: none;"])::before{
-				content: var(--listIcon, '\e806');
-				font-family: var(--listIconFamily, 'fa-fontello');
-				position: absolute;
-				left: 0;
-				top: var(--listIconPositionV, 0.5em);
-				font-size: var(--listIconSize, 0.8em);
-				line-height: 1;
-				color: var(--listIconColor, var(--textColor));
-			}
-		}
-	}
-	ol{
-		margin: var(--orderedListGap, 0 0 0 1.2em);
-		padding: 0;
-		list-style: var(--orderedListStyle, decimal);
-		li{
-			padding-left: 0.2em;
-			margin: 1em 0;
-			&::marker{
-				font-weight: var(--bold);
-				color: var(--orderedListIconColor, var(--colorS2));
-			}
-		}
-	}
+   p {
+      &:not(:last-child) {
+         margin: 0 0 0.85em 0;
+      }
+   }
 
-	.avia-section{
-		background-color: var(--sectionBgColor, var(--primaryBgColor));
-		color: var(--sectionColor, var(--textColor));
-		a{
-			font-size: var(--linkSize, inherit);
-			color: var(--linkColor, var(--primaryColor));
-			font-weight: var(--linkWeight, var(--bold));
-			text-decoration: var(--linkDecoration, underline);
-			transition: var(--linkTransition, color ease-in-out 0.2s);
-			&:hover:not(:active){
-				--linkColor: var(--linkColorHover, var(--altColor));
-				--linkDecoration: none;
-			}
-		}
-	}
+   .header,
+   .ep-custom-menu-element .menu,
+   .ep-custom-menu-element .sub-menu,
+   .av-share-box-list,
+   .ep-social-bookmarks {
+      --listGap: 0;
+      --listInnerGap: 0;
+      --listIcon: none;
+   }
 
-	.alternate_color{
-		--sectionBgColor: var(--colorP1);
-		--sectionColor: var(--colorP4);
-	}
+   ul li ul {
+      --listIconColor: var(--textColor);
+   }
+   ul li ul li ul {
+      --listIconColor: var(--colorS1);
+   }
+   ol li ol {
+      --orderedListStyle: lower-alpha;
+      --orderedListIconColor: var(--colorP1);
+   }
+   ol li ol li ol {
+      --orderedListStyle: lower-roman;
+   }
+   ul {
+      margin: 0;
+      padding: 0;
+      li {
+         margin: var(--listGap, 1em 0);
+         padding: var(--listInnerGap, 0 0 0 1.4em);
+         list-style: none;
+         position: relative;
+         &:not([style="list-style-type: none;"])::before {
+            content: var(--listIcon, "\e806");
+            font-family: var(--listIconFamily, "fa-fontello");
+            position: absolute;
+            left: 0;
+            top: var(--listIconPositionV, 0.5em);
+            font-size: var(--listIconSize, 0.8em);
+            line-height: 1;
+            color: var(--listIconColor, var(--textColor));
+         }
+      }
+   }
+   ol {
+      margin: var(--orderedListGap, 0 0 0 1.2em);
+      padding: 0;
+      list-style: var(--orderedListStyle, decimal);
+      li {
+         padding-left: 0.2em;
+         margin: 1em 0;
+         &::marker {
+            font-weight: var(--bold);
+            color: var(--orderedListIconColor, var(--colorS2));
+         }
+      }
+   }
+
+   .avia-section {
+      background-color: var(--sectionBgColor, var(--primaryBgColor));
+      color: var(--sectionColor, var(--textColor));
+      a {
+         font-size: var(--linkSize, inherit);
+         color: var(--linkColor, var(--primaryColor));
+         font-weight: var(--linkWeight, var(--bold));
+         text-decoration: var(--linkDecoration, underline);
+         transition: var(--linkTransition, color ease-in-out 0.2s);
+         &:hover:not(:active) {
+            --linkColor: var(--linkColorHover, var(--altColor));
+            --linkDecoration: none;
+         }
+      }
+      strong {
+         color: var(--strongColor, var(--textColor));
+         font-weight: var(--semibold);
+      }
+   }
+   .main_color {
+      --specialHeadingColor: var(--colorGreenPrimary);
+      --sectionColor: var(--colorBlack);
+      --strongColor: var(--colorGreenAlternate);
+   }
+   .alternate_color {
+      --sectionBgColor: var(--colorGreenAlternate);
+      --sectionColor: var(--colorWhite);
+      --specialHeadingColor: var(--colorYellowPrimary);
+      --strongColor: var(--colorYellowPrimary);
+   }
 }

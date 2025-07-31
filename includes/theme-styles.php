@@ -61,6 +61,10 @@ define( 'THEME_STYLES', array(
 				'label' => 'Small',
 				'class' => 'text-small',
 			),
+         array(
+				'label' => 'Link Box',
+				'class' => 'link-box',
+			),
 		)
     ),
 
