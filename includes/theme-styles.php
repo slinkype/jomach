@@ -79,6 +79,10 @@ define( 'THEME_STYLES', array(
     array(
 		'sc' => 'ep_heading',
 		'styles' => array(
+			array(
+				'label' => 'Centered',
+				'class' => 'heading--centered',
+			),
 		)
     ),
 

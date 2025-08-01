@@ -1,3 +1,9 @@
+.responsive #top .logo {
+	@media only screen and (max-width: 767px){
+		height: 100% !important;
+	}
+}
+
 %subMenu {
    max-height: 0;
    margin: 0;
@@ -43,18 +49,20 @@ $burger-breakpoint: 989px;
 
 :root {
    // Header
-   --headerTopMenu: 40px;
-   --headerMainMenu: 90px;
+   --headerTopMenu: 32px;
+   --headerMainMenu: 120px;
    --headerNav: calc(var(--headerMainMenu) + var(--headerTopMenu));
    --headerInnerGap: 0 20px;
    --headerMenuStatus: block;
    --headerToggleButtonStatus: none;
    --headerOverlayStatus: none;
-   --headerMenuInnerBgColor: transparent;
+   --headerMenuInnerBgColor: var(--colorGreenLight);
    --headerSearchOpacity: 0;
    --headerSearchPointer: none;
    --headerSearchTransform: translateY(calc(100% + 20px));
    --headerHamburgerWidth: 400px;
+      --headerMenuBgShadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
 
    // Items
    --headerItemSize: 14px;
@@ -69,18 +77,20 @@ $burger-breakpoint: 989px;
    --headerItemSubMenuIndicator: "\e873";
    --headerItemSubMenuArrow: "\e873";
    --headerItemSubMenuGap: 20px;
+      --headerItemColor: var(--colorGreenPrimary);
+
 
    // Logo
-   --headerLogoWidth: 213px;
-   --headerLogoHeight: 54px;
+   --headerLogoWidth: 112px;
+   --headerLogoHeight: 120px;
    --headerLogoStatus: 1;
-   --headerLogoAlternateStatus: 0;
+   --headerLogoAlternateStatus: 1;
 
    @media only screen and (max-width: #{$burger-breakpoint}) {
-      --headerMainMenu: 70px;
+      --headerLogoHeight: 80px;
+      --headerMainMenu: 130px;
       --headerMenuStatus: none;
       --headerToggleButtonStatus: block;
-      --headerMenuBgShadow: 0 0 0 1px var(--colorE4);
       --headerItemSize: 20px;
       --headerItemColor: var(--color3);
       --headerSubItemSize: 18px;
@@ -92,6 +102,8 @@ $burger-breakpoint: 989px;
    }
    @media only screen and (max-width: 767px) {
       --headerHamburgerWidth: 100%;
+      --headerMainMenu: 90px;
+
    }
 
    #top {
@@ -126,101 +138,137 @@ $burger-breakpoint: 989px;
                border-radius: 0 !important;
             }
          }
-         .header-search-container {
-            margin-right: 25px;
-            display: flex;
-            align-items: center;
-            position: static;
-            @media only screen and (min-width: 500px) {
-               position: relative;
-            }
-            .header-search-toggle {
-               width: 20px;
-               height: 20px;
-               &::after {
-                  content: "\e803";
-                  font-family: "entypo-fontello";
-                  color: var(--color3);
-                  font-size: 18px;
-                  transition: color ease-in-out 0.2s;
-               }
-               &:hover {
-                  &::after {
-                     color: var(--color2);
+         .header-search-container{
+					//margin-right: 25px;
+					display: flex;
+					align-items: center;
+					position: static;
+					@media only screen and (min-width: 500px){
+						position: relative;
+					}
+					.header-search-toggle, .header-search-button{
+						width: 40px;
+						height: 40px;
+						background: var(--colorYellowPrimary);
+						justify-content: center;
+						align-items: center;
+						display: flex;
+                  border-radius: 6px;
+                  color: var(--colorGreenDark);
+						@media only screen and (min-width: 1200px){
+							display: none;	
+						}
+						&::after{
+							content: '\e803';
+							font-family: 'entypo-fontello';
+							color: var(--colorGreenDark);
+							font-size: 17px;
+							transition: color ease-in-out 0.2s;
+						}
+						&:hover{
+							&::after{
+								color: var(--colorGreenDark);
+							}
+						}
+					}
+					.header-search-toggle {
+                  @media screen and (max-width: 1200px) {
+                     display: none;
                   }
                }
-            }
-            .header-search-form {
-               position: absolute;
-               width: 100%;
-               right: 0;
-               bottom: 15px;
-               transform: var(--headerSearchTransform);
-               background-color: var(--color3);
-               box-shadow: 0 15px 30px rgba($color: #000000, $alpha: 0.3);
-               border-radius: 10px;
-               padding: 20px;
-               opacity: var(--headerSearchOpacity);
-               pointer-events: var(--headerSearchPointer);
-               transition-property: opacity, transform;
-               transition-timing-function: ease-in-out;
-               transition-duration: 0.25s;
-               @media only screen and (min-width: 500px) {
-                  right: -42px;
-                  width: 380px;
-                  bottom: 0;
-               }
-               &::after {
-                  @media only screen and (min-width: 500px) {
-                     content: "";
-                     width: 16px;
-                     height: 16px;
-                     background-color: var(--color3);
-                     position: absolute;
-                     top: 0;
-                     right: 50px;
-                     transform: rotate(45deg) translateY(-50%);
-                  }
-               }
-               .search-form {
-                  position: relative;
-                  .search-input {
-                     width: 100%;
-                     min-height: 48px;
-                     border: 1px solid var(--colorE4);
-                     padding: 10px 70px 10px 15px;
-                     font-size: 14px;
-                     font-family: var(--bodyFontFamily);
-                     font-weight: var(--regular);
-                     color: var(--colorE1);
-                     outline: none;
-                     border-radius: 4px;
-                  }
-                  button {
-                     width: 48px;
-                     height: 48px;
-                     background-color: var(--color2);
-                     transition: background-color ease-in-out 0.2s;
-                     position: absolute;
-                     top: 0;
-                     right: 0;
-                     border-radius: 0 4px 4px 0;
-                     &::after {
-                        content: "\e803";
-                        font-family: "entypo-fontello";
-                        font-size: 20px;
-                        color: var(--color3);
-                     }
-                     span {
-                        display: none;
-                     }
-                     &:hover {
-                        background-color: var(--colorS2);
-                     }
-                  }
-               }
-            }
-         }
+					.header-search-form{
+						position: absolute;
+						width: 100%;
+						right: 0;
+						bottom: 15px;
+						transform: var(--headerSearchTransform);
+						background-color: var(--color3);
+						box-shadow: 0 15px 30px rgba($color: #000000, $alpha: 0.3);
+						border-radius: 10px;
+						padding: 20px;
+						opacity: var(--headerSearchOpacity);
+						pointer-events: var(--headerSearchPointer);
+						transition-property: opacity, transform;
+						transition-timing-function: ease-in-out;
+						transition-duration: 0.25s;
+						padding: 0;
+						@media only screen and (min-width: 500px){
+							right: -42px;
+							min-width: 241px;
+							bottom: 0;
+						}
+						@media only screen and (min-width: 1200px){
+							position: static;
+							transform: none;
+							padding: 0;		
+							opacity: 1;
+							width: fit-content;
+							box-shadow: none;
+							--headerSearchPointer : auto;
+						}
+						input.button {
+							background: var(--colorYellowPrimary);
+							font-size: 17px !important;
+							color: var(--colorGreenDark);
+							padding: 0 !important;
+							height: 100% !important;
+							width: 40px !important;
+                     border-radius: 6px !important;
+                     font-weight: 100 !important;
+						}
+						input {
+							color: gray;
+							padding: 12px 16px !important;
+							font-weight: var(--regular);
+                     border: none;
+                     border-radius: 6px;
+
+							&::placeholder {
+								color: #dadada;
+								font-weight: var(--regular);
+								letter-spacing: 0.5px;
+							}
+						}
+						
+						.search-form{
+							position: relative;
+							.search-input{
+								width: 100%;
+								min-height: 48px;
+								border: 1px solid var(--colorE4);
+								padding: 10px 70px 10px 15px;
+								font-size: 14px;
+								font-family: var(--bodyFontFamily);
+								font-weight: var(--regular);
+								color: var(--colorE1);
+								outline: none;
+								border-radius: 4px;
+							}
+							button{
+								width: 40px;
+								height: 40px;
+								background-color: var(--color2);
+								transition: background-color ease-in-out 0.2s;
+								position: absolute;
+								top: 0;
+								right: 0;
+								border-radius: 0 4px 4px 0;
+								&::after{
+									content: '\e803';
+									font-family: 'entypo-fontello';
+									font-size: 20px;
+									color: var(--color3);
+								}
+								span{
+									display: none;
+								}
+								&:hover{
+									background-color: var(--colorS2);
+								}
+							}
+						}
+					}
+				}
          .top-menu {
             background-color: var((--colorGreenDark));
             color: var(--colorWhite);
@@ -233,15 +281,26 @@ $burger-breakpoint: 989px;
                display: flex;
                align-items: center;
                flex-direction: row;
-               justify-content: flex-end;
+               justify-content: space-between;
                width: 100%;
-               max-width: 1600px;
+               max-width: 1310px;
                margin-left: auto;
                margin-right: auto;
                height: var(--headerTopMenu);
                padding: var(--headerInnerGap);
                position: relative;
+               font-size: 12px;
+               .location {
+                  @media screen and (max-width: 767px){
+                     display: none;
 
+                  }
+               }
+               .header-contact-info {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 20px;
+               }
                .top-menu-left {
                   display: flex;
                   align-items: center;
@@ -302,6 +361,7 @@ $burger-breakpoint: 989px;
                               opacity: 0.8;
                            }
                         }
+                        
                      }
                      &:not(:last-child) {
                         margin-right: 20px;
@@ -367,6 +427,11 @@ $burger-breakpoint: 989px;
             }
             .header-menu {
                display: var(--headerMenuStatus);
+               @media screen and (min-width: $burger-breakpoint) {
+                  display: flex;
+                  flex-direction: row;
+
+               }
                .main-menu {
                   display: flex;
                   flex-direction: row;
@@ -374,10 +439,10 @@ $burger-breakpoint: 989px;
                   margin-left: -10px;
                   margin-right: -10px;
                   .menu-item-top-level {
-                     margin-left: 10px;
-                     margin-right: 10px;
+                     margin-left: 25px;
+                     margin-right: 25px;
                      position: relative;
-                     &:not(.av-menu-button) {
+                     &:not(.avia-button) {
                         & > .menu-item-inner {
                            font-size: var(--headerItemSize);
                            color: var(--headerItemColor, var(--textColor));
@@ -394,6 +459,13 @@ $burger-breakpoint: 989px;
                                  var(--altTextColor)
                               );
                            }
+                        }
+                     }
+                     &.avia-button {
+                        a {
+                           color: var(--colorWhite);
+                           font-family: var(--headingFontFamily);
+                           font-weight: var(--semibold);
                         }
                      }
                      &.av-menu-button {
@@ -812,8 +884,8 @@ $burger-breakpoint: 989px;
 
    &.burger-is-active {
       @media only screen and (max-width: #{$burger-breakpoint}) {
-         --headerMenuInnerBgColor: var(--color1);
-         --headerLogoStatus: 0;
+         --headerMenuInnerBgColor: var(--colorGreenLight);
+         --headerLogoStatus: 1;
          --headerLogoAlternateStatus: 1;
          --headerMenuBgShadow: none;
          overflow: hidden;

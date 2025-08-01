@@ -14,7 +14,7 @@
       line-height: 1;
       font-family: var(--bodyFontFamily);
       font-weight: var(--semibold);
-      padding: var(--buttonPadding, 14px 23px);
+      padding: var(--buttonPadding, 12px 23px);
       color: var(--buttonColor, var(--altHeadingColor));
       background: var(--buttonBgColor, var(--headingColor));
       border-radius: var(--buttonBorderRadius, 6px);
@@ -66,6 +66,28 @@
          --buttonColor: var(--colorGreenDark);
          //box-shadow: inset 0 0 0 2px var(--color2);
       }
+
+      &.avia-color-tertiary {
+         --buttonBgColor: transparent;
+         --buttonColor: var(--colorGreenDark);
+         padding: 11px 20px;
+         --buttonColor: var(--colorGreenPrimary);
+         font-weight: var(--regular);
+         border: 1px solid var(--colorGreenPrimary);
+         position: relative;
+         &:after {
+            width: 41px;
+            height: 41px;
+            border-radius: 6px;
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -32px;
+            background-color: var(--colorGreenPrimary);
+         }
+    
+      }
+      // Buttons with Icons
 
       &[class*="icon_select-yes"] {
          display: inline-flex;

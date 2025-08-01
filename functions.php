@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'enfold_child_setup', 51 );
  * Enqueue scripts and styles.
  */
 function enfold_child_scripts() {
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600;700&display=swap', array(), null, 'all' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap', array(), null, 'all' );
 	wp_enqueue_style( 'avia-module-main', THEME_ASSETS . 'css/main.css', array(), THEME_VERSION, 'all' );
 	wp_enqueue_script( 'avia-module-main', THEME_ASSETS . 'js/main.js', array(), THEME_VERSION, true );
 

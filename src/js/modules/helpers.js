@@ -12,12 +12,13 @@ function toggableItemGrid() {
     if(toggleableItemGrids.length > 0 ){
         [...toggleableItemGrids].forEach((toggleableItemGrid) => { 
 
+
             const openFirst = toggleableItemGrid.classList.contains("open-first") ? true : false;
             const multipleOpen = toggleableItemGrid.classList.contains("multiple-open") ? true : false;
             const toggleEvent = toggleableItemGrid.classList.contains("toggle-hover") ? "mouseenter" : "click";
             const alwaysOneOpen = toggleableItemGrid.classList.contains("force-open") ? true : false;
             
-            const items = [...toggleableItemGrid.querySelectorAll(".ep-item")];
+            const items = [...toggleableItemGrid.querySelectorAll(".ep-item-grid-item")];
 
             if(openFirst) items[0].classList.add("is-active");
 

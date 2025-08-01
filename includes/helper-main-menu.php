@@ -8,13 +8,13 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 		<div class="top-menu-inner">
             <div class="location">Av. Domingo Cueto Mz A5 Lt5 (Asociación AES), Punta Hermosa, Lima</div>
 			
-		</div>
-      <div class="header-contact-info">
-         <div class="phone">
-				<?php echo avia_get_option( 'phone' ); ?>
+			<div class="header-contact-info">
+			   <div class="phone">
+					  <?php echo avia_get_option( 'phone' ); ?>
+				  </div>
+			   <div class="email">ventas@jomach.pe</div>
 			</div>
-         <div class="email">ventas@jomach.pe</div>
-      </div>
+		</div>
 	</div>
 	<div class="header-inner">
 		<div class="header-logo">
@@ -34,11 +34,12 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 				wp_nav_menu( $args );
 			?>
          	<div class="header-search-container">
-				<button class="header-search-toggle"></button>
-				<div class="header-search-form">
-					<?php get_search_form(); ?>
+					<a class="header-search-button" href="=?s"></a>
+					<button class="header-search-toggle"></button>
+					<div class="header-search-form">
+						<?php get_search_form(); ?>
+					</div>
 				</div>
-			</div>
 		</div>
 		<button class="hamburger-toggle" aria-label="Mobile Menu Toggle">
 			<div class="burger-box"></div>
