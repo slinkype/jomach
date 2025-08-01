@@ -124,14 +124,15 @@ body {
          list-style: none;
          position: relative;
          &:not([style="list-style-type: none;"])::before {
-            content: var(--listIcon, "\e806");
-            font-family: var(--listIconFamily, "fa-fontello");
+            content: var(--listIcon, "\e8bd");
+            font-family: var(--listIconFamily, "entypo-fontello");
             position: absolute;
             left: 0;
-            top: var(--listIconPositionV, 0.5em);
-            font-size: var(--listIconSize, 0.8em);
+            top: var(--listIconPositionV, 0.2em);
+            font-size: var(--listIconSize, 25px);
             line-height: 1;
             color: var(--listIconColor, var(--textColor));
+            font-family: 900;
          }
       }
    }
@@ -178,5 +179,6 @@ body {
       --sectionColor: var(--colorWhite);
       --specialHeadingColor: var(--colorYellowPrimary);
       --strongColor: var(--colorYellowPrimary);
+      --textColor: var(--colorWhite);
    }
 }

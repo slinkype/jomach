@@ -10,8 +10,10 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 			
 		</div>
       <div class="header-contact-info">
-         <div class="phone">Tel: (01) 123-4567</div>
-         <div class="email">Email: info@example.com</div>
+         <div class="phone">
+				<?php echo avia_get_option( 'phone' ); ?>
+			</div>
+         <div class="email">ventas@jomach.pe</div>
       </div>
 	</div>
 	<div class="header-inner">
