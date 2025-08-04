@@ -2,6 +2,16 @@
 Footer.scss
 Create a Page for a footer, then assign section CSS class `footer-section`
 **/
-.footer-section{
-    
+.footer-page-content {
+   .avia-section:first-child {
+      .container {
+         padding-top: 53px !important;
+         p {
+            margin: auto;
+         }
+      }
+   }
+   .avia-section:last-child {
+      min-height: auto;
+   }
 }

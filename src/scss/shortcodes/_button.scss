@@ -12,7 +12,7 @@
    .av-menu-button .menu-item-inner {
       font-size: var(--buttonSize, 16px);
       line-height: 1;
-      font-family: var(--bodyFontFamily);
+      font-family: var(--headingFontFamily);
       font-weight: var(--semibold);
       padding: var(--buttonPadding, 12px 23px);
       color: var(--buttonColor, var(--altHeadingColor));
@@ -85,7 +85,6 @@
             right: -32px;
             background-color: var(--colorGreenPrimary);
          }
-    
       }
       // Buttons with Icons
 

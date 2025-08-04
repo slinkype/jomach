@@ -18,6 +18,11 @@ define( 'THEME_STYLES', array(
     array(
 		'sc' => 'ep_row',
 		'styles' => array(
+         	array(
+				'label' => 'Minimo placeholder',
+				'class' => 'min-placeholder',
+				
+			),
 		)
     ),
 
@@ -25,6 +30,11 @@ define( 'THEME_STYLES', array(
     array(
 		'sc' => 'ep_column',
 		'styles' => array(
+         array(
+				'label' => 'Minimo placeholder',
+				'class' => 'min-placeholder',
+				
+			),
 		)
     ),
 
@@ -83,6 +93,14 @@ define( 'THEME_STYLES', array(
 				'label' => 'Centered',
 				'class' => 'heading--centered',
 			),
+         array(
+				'label' => 'Heading Line Below',
+				'class' => 'heading-line-below',
+			),
+          array(
+				'label' => 'Alternative Subheading',
+				'class' => 'alternative-subheading',
+			),
 		)
     ),
 
@@ -104,14 +122,17 @@ define( 'THEME_STYLES', array(
 	array(
 		'sc' => 'ep_item_grid',
 		'styles' => array(
-			/*
-			array(
-				'label' => 'Item Grid Solutions',
-				'class' => 'itemgrid--solutions',
-				'lazy_css' => true,
-				'initial_height => '300px',
-			),
-			*/
+			
+			 array(
+				'label' => 'Grid Principios',
+				'class' => 'item-grid-principios',
+          ),
+
+           array(
+				'label' => 'Grid Questions',
+				'class' => 'item-grid-questions',
+          ),
+			
 		)
     ),
 
@@ -162,6 +183,10 @@ define( 'THEME_STYLES', array(
     array(
 		'sc' => 'ep_hr',
 		'styles' => array(
+         array(
+				'label' => 'Gray Line',
+				'class' => 'gray-line',
+			)
 		)
     ),
 
@@ -169,6 +194,7 @@ define( 'THEME_STYLES', array(
     array(
 		'sc' => 'ep_icon',
 		'styles' => array(
+         
 		)
     ),
 	

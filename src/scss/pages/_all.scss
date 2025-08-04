@@ -1,0 +1,43 @@
+#top {
+   .gray-line {
+      margin-bottom: 15px;
+      .hr-inner {
+         width: 100%;
+         height: 1px;
+         background-color: var(--colorGrayLight);
+      }
+   }
+   .half-gray-line {
+      .hr-inner {
+         width: 80%;
+         height: 1px;
+         background-color: var(--colorGrayLight);
+      }
+   }
+
+   .heading-line-below {
+      .av-special-heading-tag {
+         position: relative;
+         width: 100%;
+         &:after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 1px;
+            background-color: var(--headingLineColor);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto 0;
+         }
+      }
+   }
+
+   .item-grid-principios {
+      .ep-item-grid-item {
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+   }
+}

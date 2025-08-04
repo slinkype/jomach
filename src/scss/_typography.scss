@@ -35,12 +35,13 @@ body {
    .h1 .av-special-heading-tag {
       --headingSize: 54px;
       --headingLineHeight: 1.3;
+      --headingWeight: var(--bold);
    }
 
    h2,
    .h2 .av-special-heading-tag {
       --headingSize: 48px;
-      --headingLineHeight: 1.31;
+      --headingLineHeight: 1;
    }
 
    h3,
@@ -58,7 +59,7 @@ body {
    h5,
    .h5 .av-special-heading-tag {
       --headingSize: 20px;
-      --headingLineHeight: 1.5;
+      --headingLineHeight: 1;
    }
 
    h6,
@@ -119,7 +120,7 @@ body {
       margin: 0;
       padding: 0;
       li {
-         margin: var(--listGap, 1em 0);
+         margin: var(--listGap, 5px 0);
          padding: var(--listInnerGap, 0 0 0 1.4em);
          list-style: none;
          position: relative;
@@ -150,18 +151,50 @@ body {
       }
    }
 
+   /* Forms */
+   input[type="text"],
+   textarea,
+   input[type="email"] {
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 0;
+   }
+
+   button[type="submit"] {
+      font-family: var(--headingFontFamily);
+      font-weight: var(--semibold);
+      color: var(--colorGreenDark);
+      background: linear-gradient(180deg, #fbf75e 0%, #d8d43a 100%);
+      border-radius: 6px;
+      margin: 0 auto;
+      display: block;
+   }
+   .iconbox {
+      margin-bottom: 0;
+   }
+   .hr {
+      margin: 10px 0;
+      &.hr-default {
+         .hr-inner {
+            background-color: var(--hrBgColor);
+         }
+      }
+   }
+
+   /* Color Section */
    .avia-section {
       background-color: var(--sectionBgColor, var(--primaryBgColor));
       color: var(--sectionColor, var(--textColor));
       a {
          font-size: var(--linkSize, inherit);
-         color: var(--linkColor, var(--primaryColor));
-         font-weight: var(--linkWeight, var(--bold));
-         text-decoration: var(--linkDecoration, underline);
+         color: var(--linkColor, var(--textColor));
+         font-weight: var(--linkWeight, var(--regular));
+         text-decoration: var(--linkDecoration, none);
          transition: var(--linkTransition, color ease-in-out 0.2s);
          &:hover:not(:active) {
             --linkColor: var(--linkColorHover, var(--altColor));
-            --linkDecoration: none;
+            --linkDecoration: underline;
          }
       }
       strong {
@@ -173,12 +206,15 @@ body {
       --specialHeadingColor: var(--colorGreenPrimary);
       --sectionColor: var(--colorBlack);
       --strongColor: var(--colorGreenAlternate);
+      --headingLineColor: var(--colorGreenPrimary);
    }
    .alternate_color {
+      --hrBgColor: var(--colorWhite);
       --sectionBgColor: var(--colorGreenAlternate);
       --sectionColor: var(--colorWhite);
       --specialHeadingColor: var(--colorYellowPrimary);
-      --strongColor: var(--colorYellowPrimary);
+      --strongColor: var(--colorWhite);
       --textColor: var(--colorWhite);
+      --headingLineColor: var(--colorYellowPrimary);
    }
 }

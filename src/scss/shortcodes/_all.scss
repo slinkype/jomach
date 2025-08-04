@@ -1,8 +1,59 @@
 #top {
-    .heading--centered {
-        .av-special-heading-tag {
-            text-align: center;
-            margin: 0 auto;
-        }
-    }
+   .heading--centered {
+      .av-special-heading-tag {
+         text-align: center;
+         margin: 0 auto;
+      }
+   }
+
+   .avia-gallery-big,
+   .avia-gallery img {
+      border-radius: 6px !important;
+      border-color: transparent;
+      background: transparent;
+   }
+
+   .item-grid-questions {
+      .ep-item-grid-item-inner {
+         border: 1px solid var(--colorGreenPrimary);
+         border-radius: 6px;
+         padding: 12px 19px;
+         position: relative;
+         &:after {
+            width: 41px;
+            height: 100%;
+            border-radius: 6px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -32px;
+            background-color: var(--colorGreenPrimary);
+            max-height: 45px;
+         }
+         .ep-item-grid-item-title {
+            font-size: 20px;
+            font-weight: var(--regular);
+            margin-bottom: 0;
+            line-height: 1;
+         }
+         .ep-item-grid-item-content {
+            height: 0;
+            opacity: 0;
+            display: none;
+         }
+      }
+      .ep-item-grid-item.is-active {
+         .ep-item-grid-item-inner {
+            height: fit-content;
+            &:after {
+               transform: rotate(180deg);
+            }
+            .ep-item-grid-item-content {
+               height: fit-content;
+               opacity: 1;
+               display: block;
+            }
+         }
+      }
+   }
 }

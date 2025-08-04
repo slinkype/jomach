@@ -1,18 +1,19 @@
-@import 'variables';
-@import 'base';
-@import 'helpers';
-@import 'typography';
-@import 'header';
+@import "variables";
+@import "base";
+@import "helpers";
+@import "typography";
+@import "header";
 
-@import 'lightbox';
+@import "lightbox";
 
-@import 'shortcodes/all';
-@import 'shortcodes/button';
-@import 'shortcodes/heading';
-@import 'shortcodes/text-block';
+@import "shortcodes/all";
+@import "shortcodes/button";
+@import "shortcodes/heading";
+@import "shortcodes/text-block";
+@import "shortcodes/section-contactanos";
 
-@import 'pages/all';
+@import "pages/all";
 
-@import 'templates/all'; 
+@import "templates/all";
 
-@import 'footer';
+@import "footer";
