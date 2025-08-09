@@ -6,13 +6,27 @@ $header_class = apply_filters( 'avf_header_class_filter', $header_class );
 <div class="header <?php echo $header_class; ?>">
 	<div class="top-menu">
 		<div class="top-menu-inner">
-            <div class="location">Av. Domingo Cueto Mz A5 Lt5 (Asociación AES), Punta Hermosa, Lima</div>
+            <div class="location">
+            <i class="av-icon-char" 
+               style="font-family: 'jomach-icons-v1';">
+               &#xe813;
+            </i>   
+            Av. Domingo Cueto Mz A5 Lt5 (Asociación AES), Punta Hermosa, Lima</div>
 			
 			<div class="header-contact-info">
 			   <div class="phone">
+                  <i class="av-icon-char" 
+                  style="font-family: 'jomach-icons-v1';">
+                  &#xe814;
+               </i>   
 					  <?php echo avia_get_option( 'phone' ); ?>
 				  </div>
-			   <div class="email">ventas@jomach.pe</div>
+			   <a class="email" href="mailto:ventas@jomach.pe">
+               <i class="av-icon-char" 
+               style="font-family: 'jomach-icons-v1';">
+               &#xe812;
+            </i>   
+               ventas@jomach.pe</a>
 			</div>
 		</div>
 	</div>

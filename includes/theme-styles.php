@@ -132,6 +132,10 @@ define( 'THEME_STYLES', array(
 				'label' => 'Grid Questions',
 				'class' => 'item-grid-questions',
           ),
+          array(
+				'label' => 'Table Style',
+				'class' => 'item-grid-table',
+          ),
 			
 		)
     ),
